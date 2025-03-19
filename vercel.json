@@ -2,11 +2,23 @@
   "version": 2,
   "builds": [
     {
-      "src": "*.html",
+      "src": "**/*.html",
       "use": "@vercel/static"
     }
   ],
   "routes": [
+    {
+      "src": "/templates/login1",
+      "dest": "/templates/login1.html"
+    },
+    {
+      "src": "/templates/login2",
+      "dest": "/templates/login2.html"
+    },
+    {
+      "src": "/templates/page1",
+      "dest": "/templates/page1.html"
+    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
