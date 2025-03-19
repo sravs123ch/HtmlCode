@@ -40,8 +40,8 @@
       "dest": "/images/$1"
     },
     {
-      "src": "/js/(.*)",
-      "dest": "/js/$1"
+      "src": "/(.*)",
+      "dest": "/script.js"
     },
     {
       "src": "/(.*)",
