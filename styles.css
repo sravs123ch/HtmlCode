@@ -1,0 +1,46 @@
+/* Add these new styles */
+.selected-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.tag {
+  background-color: #00bcd4;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.tag-remove {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown-container {
+  position: relative;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+/* Style for selected/active tags */
+.tag.active {
+  background-color: #00bcd4;
+}
+
+/* Style for unselected amenity options */
+.amenity-tag:not(.active) {
+  background-color: #f0f0f0;
+  color: #666;
+}

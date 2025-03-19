@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abodio.ai - Property Registration</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../script.js"></script>
+  </head>
+  <body>
+    <!-- Main Navigation -->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="abodio-logo.png" alt="Abodio AI" />
+      </div>
+      <div class="nav-links">
+        <a href="#">Buy</a>
+        <a href="#">Rent</a>
+        <a href="#">Commercial</a>
+        <a href="#">Find an Agent</a>
+      </div>
+      <div class="nav-auth">
+        <a href="#">Sign in</a>
+        <button class="register-btn" onclick="openModal()">Register</button>
+      </div>
+    </nav>
+
+    <!-- Modal/Popup -->
+    <div id="registerModal" class="modal">
+      <div class="modal-content">
+        <div class="progress-bar">
+          <div class="progress-step active"></div>
+          <div class="progress-step"></div>
+          <div class="progress-step"></div>
+        </div>
+
+        <!-- Slide 1 -->
+        <div class="form-slide active" id="slide1">
+          <h2>Talk to us about your recently acquired property.</h2>
+          <div class="form-group">
+            <label>Your preferred location</label>
+            <div class="custom-select-container">
+              <div class="select-with-tags">
+                <div class="tags-area" id="locationTags"></div>
+                <select id="locationSelect" onchange="addTag('location')">
+                  <option value="">Select location</option>
+                  <option value="Toronto">Toronto</option>
+                  <option value="Ottawa">Ottawa</option>
+                  <option value="Montreal">Montreal</option>
+                </select>
+              </div>
+              <div class="select-arrow">▼</div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>What's your budget?</label>
+              <input type="text" placeholder="$100,000" class="input-field" />
+            </div>
+            <div class="form-group">
+              <label>Timeframe for buying</label>
+              <input type="text" placeholder="3 months" class="input-field" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Type of properties</label>
+            <div class="custom-select-container">
+              <div class="select-with-tags">
+                <div class="tags-area" id="propertyTags"></div>
+                <select id="propertySelect" onchange="addTag('property')">
+                  <option value="">Choose property type</option>
+                  <option value="Condo">Condo</option>
+                  <option value="Detached">Detached</option>
+                  <option value="Town-house">Town-house</option>
+                </select>
+                <div class="select-arrow">▼</div>
+              </div>
+            </div>
+          </div>
+
+          <button class="continue-btn" onclick="nextSlide()">Continue</button>
+          <a href="#" class="skip-link" onclick="nextSlide()">Skip for now</a>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="form-slide" id="slide2">
+          <h2>Tell us about your preferences</h2>
+          <div class="form-group">
+            <label>Are you working with a real estate agent?</label>
+            <div class="custom-select-container">
+              <select class="input-field" style="width: 100%">
+                <option value="">Select Yes/No</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+              <div class="select-arrow">▼</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Are you pre-approved by a lender?</label>
+            <div class="custom-select-container">
+              <select class="input-field" style="width: 100%">
+                <option value="">Select Yes/No</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+              <div class="select-arrow">▼</div>
+            </div>
+          </div>
+
+          <button class="continue-btn" onclick="nextSlide()">Continue</button>
+          <a href="#" class="skip-link" onclick="nextSlide()">Skip for now</a>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="form-slide" id="slide3">
+          <h2>Choose your amenities</h2>
+          <div class="amenities-grid">
+            <button class="amenity-tag selected">
+              Yoga studio <span class="icon">×</span>
+            </button>
+            <button class="amenity-tag selected">
+              Gym centre <span class="icon">×</span>
+            </button>
+            <button class="amenity-tag selected">
+              Parking area <span class="icon">×</span>
+            </button>
+            <button class="amenity-tag">
+              Dry cleaning <span class="icon">+</span>
+            </button>
+            <button class="amenity-tag selected">
+              Dog runs <span class="icon">×</span>
+            </button>
+            <button class="amenity-tag">
+              Kids Park <span class="icon">+</span>
+            </button>
+            <button class="amenity-tag">
+              Auditorium <span class="icon">+</span>
+            </button>
+            <button class="amenity-tag">
+              Yoga studio <span class="icon">+</span>
+            </button>
+            <button class="amenity-tag">
+              Playground <span class="icon">+</span>
+            </button>
+            <button class="amenity-tag">
+              Garden <span class="icon">+</span>
+            </button>
+            <button class="amenity-tag">
+              Clubhouse <span class="icon">+</span>
+            </button>
+            <button class="amenity-tag">
+              Rooftop lounge <span class="icon">+</span>
+            </button>
+            <button class="amenity-tag">
+              Swimming pool <span class="icon">+</span>
+            </button>
+            <button class="amenity-tag">
+              Golf simulator <span class="icon">+</span>
+            </button>
+          </div>
+
+          <button class="continue-btn">Continue</button>
+          <a href="#" class="skip-link">Skip for now</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
